@@ -1,0 +1,30 @@
+:root {
+  --yelllow: #f6e58d;
+  --orange: #ffbe76;
+  --lightblue: #dff9fb;
+  --lightpurple: #686de0;
+  --purple: #30336b;
+}
+
+body * {
+  font-family: 'Fira Code', monospace !important;
+}
+
+.hidden {
+  display: none !important;
+}
+.yellow-background {
+  background: var(--yelllow);
+}
+.orange-background {
+  background: var(--orange);
+}
+.ligthblue-background {
+  background: var(--lightblue);
+}
+.lightpurple-background {
+  background: var(--lightpurple);
+}
+.purple-background {
+  background: var(--purple);
+}

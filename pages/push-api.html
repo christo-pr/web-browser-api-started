@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Push API</title>
+    <link rel="stylesheet" href="/assets/css/vendor/bulma.min.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/icons.css" />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/push.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Code:500|Vast+Shadow&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="back">
+        <a href="/"> ⬅️Regresar</a>
+      </div>
+      <div class="column flex-column">
+        <div class="card">
+          <div class="card-inner">
+            <header class="card-header has-background-info">
+              <p class="card-header-title has-text-white">
+                Activa las notificaciones
+              </p>
+            </header>
+            <div class="card-front has-background-white">
+              <div class="card-content has-text-centered">
+                <p>
+                  Para poder usar el API de notificaciones primero se tiene que
+                  autorizar por el usuario.
+                  <br />
+                  <br />
+                  Da click en el boton <b>"Autorizar"</b> y permite las
+                  notificaciones para continuar.
+                </p>
+                <hr />
+                <div class="permission-status">
+                  <!-- Loading -->
+                  <div class="loading lds-ellipsis hidden">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <!-- Permission not granted -->
+                  <div class="icon-container-forbidden">
+                    <div class="has-text-danger">
+                      <span class="icon">
+                        <i class="icon-blocked is-size-1"></i>
+                      </span>
+                    </div>
+                    <small class="has-text-danger">No Autorizado</small>
+                  </div>
+                  <!-- Permission Granted -->
+                  <div class="icon-container-success hidden">
+                    <div class="has-text-success">
+                      <span class="icon">
+                        <i class="icon-checkmark is-size-1"></i>
+                      </span>
+                    </div>
+                    <small class="has-text-success">Autorizado</small>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <button class="button is-success" id="request-permission">
+                    Autorizar Notificaciones
+                  </button>
+                </p>
+              </footer>
+            </div>
+            <div class="card-back has-text-centered has-background-white">
+              <p>Ingresa un titulo y una descripcion para la notificacion</p>
+              <div class="card-content">
+                <form
+                  action=""
+                  id="new-notification-form"
+                  name="notification-form"
+                >
+                  <div class="field">
+                    <label class="label">Titulo</label>
+                    <div class="control">
+                      <input
+                        class="input"
+                        name="title"
+                        type="text"
+                        placeholder="Titulo..."
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Mensaje</label>
+                    <div class="control">
+                      <input
+                        class="input"
+                        name="message"
+                        type="email"
+                        placeholder="Mensaje..."
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <button
+                    class="button is-success is-disabled"
+                    id="send-notification"
+                  >
+                    Enviar Notificacion
+                  </button>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/push.js"></script>
+  </body>
+</html>

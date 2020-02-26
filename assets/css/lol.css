@@ -1,0 +1,226 @@
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #01191cfe;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #23707afe;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #24c1d5fe;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  justify-content: flex-start;
+  padding-top: 3rem !important;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: url('/assets/images/hextech_background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: rgb(11, 32, 35);
+  background: linear-gradient(
+    90deg,
+    rgba(11, 32, 35, 1) 0%,
+    rgba(35, 112, 122, 0.9976365546218487) 66%,
+    rgba(10, 26, 28, 1) 100%
+  ); */
+}
+body * {
+  color: white;
+}
+.container {
+  width: 80%;
+  margin: 2rem 0;
+}
+.row {
+  width: 80%;
+  height: 70%;
+  padding: 1rem;
+  justify-content: space-around;
+}
+.champions {
+  width: 30%;
+  height: 100%;
+  max-height: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.champions ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 1rem;
+}
+.champions .champ {
+  padding: 1rem;
+  background: #1b454beb;
+  display: flex;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 1rem 0;
+  z-index: 99;
+}
+.champions .champ:hover {
+  box-shadow: 0 0 5px #59b6c4f7;
+}
+.champ-image {
+  min-width: 240px;
+  max-height: 300px;
+  text-align: center;
+}
+.champ-image img {
+  max-height: 310px;
+}
+.champ-stats {
+  padding-left: 1rem;
+  flex-grow: 2;
+}
+.champ-stats h3 {
+  font-size: 30px;
+}
+.champ-stats p {
+  font-size: 15px;
+  font-style: italic;
+}
+.champ-stats hr {
+  width: 100%;
+  opacity: 0.2;
+  margin: 0.5rem 0;
+}
+.champ-stats .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+.champ-stats .tags .badge {
+  background: lightyellow;
+  border-radius: 15px;
+  color: black;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+.champion-detail {
+  width: 60%;
+}
+.champion-detail .detail-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.champion-detail .champ-info {
+  margin-top: 0.5rem;
+}
+.champ-info .title {
+  font-size: 30px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.champ-info .stats ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+  text-align: center;
+}
+.champ-info .stats img {
+  display: block;
+}
+.champ-info .stats span {
+  display: block;
+  margin-top: 0.5rem;
+}
+.champ-info .spells {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+  text-align: center;
+}
+.spell {
+  cursor: pointer;
+}
+.spell img {
+  border: thick double goldenrod;
+}
+.spell figcaption {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.placeholder {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  font-size: 60px;
+  color: rgb(4, 10, 20);
+}
+
+.placeholder.show {
+  display: flex;
+}
+
+.placeholder p {
+  color: #647084;
+}
+/*
+* Loading Animation
+*/
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}

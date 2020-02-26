@@ -1,0 +1,37 @@
+html {
+  background-image: url('/assets/images/main-background.jpg');
+}
+h1 {
+  font-family: 'Vast Shadow', cursive;
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 2rem;
+}
+body .panel {
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.5),
+    0 0 0 1px rgba(10, 10, 10, 0.05);
+}
+body .card {
+  max-height: 500px;
+  min-height: 500px;
+  transition: 0.3s;
+}
+body .card:hover {
+  transform: scale(1.02);
+}
+.card-image img {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.grid-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 40rem);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+
+.grid-column {
+  justify-self: center;
+}

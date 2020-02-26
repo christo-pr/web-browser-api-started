@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Brower APIs</title>
+    <link rel="stylesheet" href="/assets/css/drum.css" />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Code:500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="yellow-background">
+    <div class="container">
+      <div class="back">
+        <a href="/"> ⬅️Regresar</a>
+      </div>
+      <!-- Drum kit -->
+      <div id="drum-kit">
+        <img src="/assets/images/drum.png" alt="Drum" />
+
+        <!-- Keys -->
+        <div class="keys">
+          <div data-key="S" class="key hihat">S</div>
+          <div data-key="E" class="key crash">E</div>
+          <div data-key="Y" class="key ride">Y</div>
+          <div data-key="D" class="key snare">D</div>
+          <div data-key="G" class="key tom">G</div>
+          <div data-key="H" class="key boom">H</div>
+          <div data-key="V" class="key kick">V</div>
+          <div data-key="J" class="key tomp">J</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audios -->
+    <audio data-key="S" src="/assets/audio/hihat.wav" preload></audio>
+    <audio data-key="E" src="/assets/audio/crash.wav" preload></audio>
+    <audio data-key="Y" src="/assets/audio/ride.wav" preload></audio>
+    <audio data-key="D" src="/assets/audio/snare.wav" preload></audio>
+    <audio data-key="G" src="/assets/audio/tom.wav" preload></audio>
+    <audio data-key="H" src="/assets/audio/boom.wav" preload></audio>
+    <audio data-key="V" src="/assets/audio/kick.wav" preload></audio>
+    <audio data-key="J" src="/assets/audio/boom.wav" preload></audio>
+
+    <script src="/assets/js/drum.js"></script>
+  </body>
+</html>
